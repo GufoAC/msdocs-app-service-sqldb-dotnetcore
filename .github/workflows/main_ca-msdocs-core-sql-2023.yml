@@ -33,10 +33,7 @@ jobs:
 
       - name: dotnet bundle migration
         run: 
-         pwd
-         ls -l
          dotnet ef migration bundle --runtime linux-x84 -p DotNetCoreSqlDb/DotNetCoreSqlDb.csproj 
-         dotnet build
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
